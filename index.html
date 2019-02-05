@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Assignment 02</title>
+	<script src="main.js"></script>
+</head>
+
+<body>
+	<!--Quote Box-->
+	<h2>Random Quote:</h2>
+	<div id="quote"><!-- A random quote will be displayed here --></div>
+		<button value="#ffbf0f" style="background-color:#ffbf0f; padding:10px" onclick="color1(this)"></button>
+		<button value="#ff3a4a" style="background-color:#ff3a4a; padding:10px"  onclick="color2(this)"></button>
+		<button value="black" style="background-color:black; padding:10px" onclick="color3(this)"></button>
+		<button value="#ff6e3d" style="background-color:#ff6e3d; padding:10px" onclick="color4(this)"></button>
+	<br>
+	<br>
+	<!-- Converter -->
+	<h2>Converter:</h2>
+	<div class="con">
+		<div id="convert">
+			Kilogram :<input id="kilogram" type="number" oninput="kgToLbs(this.value)" onchange="kgToLbs(this.value)"> kg
+			<br>
+			<br>
+			Pound :<input id="pound" type="number" oninput="lbToKgs(this.value)" onchange="lbToKgs(this.value)"> lb
+		</div>
+	</div>
+	<br>
+	<!-- Series of Numbers -->
+	<div>
+		<h2>Numbers Series:</h2> 
+		<table>
+      	<tr>
+        	<td>Enter Series of Number:</td>
+        	<td><input name="box1" type="text" id="box1" onchange="calculate()" /></td>
+      </tr>
+      <tr>
+        <td>&nbsp;</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>Max :</td>
+        <td><div id="max"> </div></td>
+      </tr>
+      <tr>
+        <td>Min :</td>
+        <td><div id="min"> </div></td>
+      </tr>
+      <tr>
+        <td>Sum  :</td>
+        <td><div id="sum"> </div></td>
+      </tr>
+      <tr>
+        <td>Average :</td>
+        <td><div id="avg"> </div></td>
+      </tr>
+      <tr>
+        <td>Reverse Order :</td>
+        <td><div id="reverse"> </div></td>
+      </tr>
+      <tr>
+        <td>&nbsp;</td>
+        <td></td>
+      </tr>
+    </table>
+		<button onclick="calculate()">Calculate</button>
+	</div>
+	<br>
+	<!--Text Area-->
+	<div class="container">
+		<h2>Text Area:</h2>
+		<textarea id="text" style="width: 200px; height: 100px">	
+		</textarea>
+		<br>
+		<br>
+		<button onclick="document.getElementById('text').value = ''">Clear</button>
+		<button onclick="capitalize()">Capitalize</button>
+		<button onclick="sortout()">Sort</button>
+		<button onclick="rev()">Reverse</button>
+		<button onclick="blankRmv()">Strip Blank</button>
+		<button onclick="addNo()">Add Numbers</button>
+		<button onclick="shuff()">Shuffle</button>
+	</div>	
+</body>
+</html>
